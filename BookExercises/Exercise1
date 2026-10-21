@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            ABOUT ME
+        </title>
+    </head>
+    <body>
+        <h1>Konnichiwa mina-san!</h1>
+        <h1>My name is NURIN QISTINA BINTI MISNADI</h1>
+       
+        <p>I really love to spend my times with 
+            <strong>playing video games like </strong> <em>VALORANT, Resident Evil &amp; more</em>.
+        I also love to watch some movies and do other things to enjoy my free time.</p>
+        <p>Here are other stuffs that get my interest: <br></p>
 
+        <section>  
+        <h2>My Favourite Movies</h2>
+        <ol>
+            <li>White Chicks</li>
+            <li>Spider Man</li>
+            <li>Fantastic 4</li>
+        </ol>
+        </section>
+
+        <section>
+        <h2>My Top 3 Favourite Hobbies</h2>
+        <ul>
+            <li>Sleep</li>
+            <li>Playing video games</li>
+            <li>Cafe Hunting</li>
+        </ul>
+        </section>
+
+        <p>You guys can try click here to play my fav ones! <a href="https://playvalorant.com/en-us/" target="_blank"> VALORANT</a></p>
+
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/e1ba56c2480992f0e85b03258b12647e03222869-854x484.png?accountingTag=VAL&fit=crop&fm=webp&q=80&h=193&w=343&crop=center" alt="Placeholder image">
+        <img src="https://i.pinimg.com/736x/bb/73/ab/bb73ab989322760bcf3c0f64e549f7a3.jpg" alt="Placeholder image">
+        <img src="https://wallpapercave.com/wp/wp11934993.jpg" alt="Placeholder image">
+
+        <!--This is a comment and will not be displayed in the browser-->
+    </body>
+    <footer>
+        <p>TYSM FOR VISITING MY WEBPAGE!!!</p>
+    </footer>
+</html>
