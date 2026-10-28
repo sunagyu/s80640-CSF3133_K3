@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7th Hackathon Event - The Programmer Club</title>
+</head>
+<body>
 
+    <!-- Header Section -->
+    <header>
+        <h1>THE PROGRAMMER CLUB</h1>
+        <p>Welcome to Programmer Club page! We offer you to join our 7th Hackathon event that will be held on 11/28/2026.</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about">About the Event</a></li>
+            <li><a href="#schedule">Event Schedule</a></li>
+            <li><a href="#register">Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- About the Event Section -->
+    <section id="about">
+        <h2>About the Event</h2>
+        <p>Join us for 24 hours of non-stop coding, innovation, and networking at our 7th annual hackathon.</p>
+        
+        <!-- Speaker / Activity 1 -->
+        <article>
+            <h3>Keynote Speaker: Dr. Yin</h3>
+            <p>Dr. Yin will discuss the future of artificial intelligence and automated problem solving in modern software development.</p>
+        </article>
+
+        <!-- Speaker / Activity 2 -->
+        <article>
+            <h3>Activity: Midnight Coding Challenge</h3>
+            <p>An optional rapid-fire algorithmic puzzle session to test your endurance and win exclusive tech gear.</p>
+        </article>
+    </section>
+
+    <!-- Event Schedule Section -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <p>Overview of the activities and sessions lined up for the day.</p>
+        
+<!-- Schedule Table -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td>08:00 AM - 09:00 AM</td>
+                    <td>Registration & Breakfast</td>
+                    <td>Main Lobby</td>
+                    <td>Ahmad Nur Arif</td>
+                </tr>
+                <!-- Row 2 -->
+                <tr>
+                    <td>09:00 AM - 10:00 AM</td>
+                    <td>Opening Ceremony & Keynote</td>
+                    <td>Auditorium A</td>
+                    <td>Dr. Yin</td>
+                </tr>
+                <!-- Row 3 & 4: Using rowspan -->
+                <tr>
+                    <td>10:00 AM - 01:00 PM</td>
+                    <td>Hacking Phase 1</td>
+                    <td rowspan="2">Computer Lab 3</td>
+                    <td>Dinie Yasmin</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td>Mentorship Check-in</td>
+                    <td>Damia Yasarah</td>
+                </tr>
+                <!-- Row 5: Using colspan -->
+                <tr>
+                    <td>02:00 PM - 03:00 PM</td>
+                    <td colspan="3">Networking Lunch Break</td>
+                </tr>
+                <!-- Row 6 -->
+                <tr>
+                    <td>03:00 PM - 06:00 PM</td>
+                    <td>Final Submissions & Judging</td>
+                    <td>Auditorium A</td>
+                    <td>All Judges</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <h2>Registration</h2>
+        <p>Fill out the form below to secure your spot at the hackathon.</p>
+        
+        <!-- Registration Form -->
+        <form action="register.html" method="post">
+            
+            <!-- Full Name -->
+            <div>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <!-- Matric Number -->
+            <div>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric" name="matric" required>
+            </div>
+
+            <!-- E-mail -->
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Year of Study (Radio Buttons) -->
+            <div>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_of_study" value="Year 1">
+                <label for="year1">Year 1</label><br>
+                <input type="radio" id="year2" name="year_of_study" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                <input type="radio" id="year3" name="year_of_study" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                <input type="radio" id="year4" name="year_of_study" value="Year 4">
+                <label for="year4">Year 4</label>
+            </div>
+
+            <!-- Sessions Checkboxes -->
+            <div>
+                <label>Sessions to Join:</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                <label for="session1">Keynote Address</label><br>
+                <input type="checkbox" id="session2" name="sessions" value="Hacking">
+                <label for="session2">Main Hacking Sprint</label><br>
+                <input type="checkbox" id="session3" name="sessions" value="Mentorship">
+                <label for="session3">Mentorship Session</label>
+            </div>
+
+            <!-- Programme / Faculty Drop-down -->
+            <div>
+                <label for="faculty">Programme or Faculty:</label>
+                <select id="faculty" name="faculty">
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="software">Software Engineering</option>
+                    <option value="data">Data Science</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit">Submit Registration</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organiser: The Programmer Club</p>
+        <p>&copy; 2026 The Programmer Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
