@@ -79,7 +79,9 @@
 
                 <p>
                     <label for="sweetness">Sweetness Level (1 - 5):</label><br>
-                    <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3">
+                    <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3" 
+                        oninput="sweetnessValue.innerText = this.value">
+                    <output id="sweetnessValue">3</output>
                 </p>
 
                 <!-- 6. Price Calculator (<output>) -->
