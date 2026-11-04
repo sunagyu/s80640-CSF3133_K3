@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- 
+        ERROR LOG LIST (Part 1, Instruction 2):
+        - Error 1 (Line 9): Closing </span> tag is placed incorrectly outside the <h1> element.
+        - Error 2 (Line 11): Content section uses <span> instead of a block element like <div>.
+        - Error 3 (Line 18): Input type has a typo (`type="emial"` instead of `type="email"`).
+        - Error 4 (Line 22): Datalist id="movielist" is not linked to the movie input (`list="movies"` instead of `list="movielist"`).
+        - Error 5 (Line 32): Range slider attributes are inverted (`min="5" max="1"` instead of `min="1" max="5"`).
+        - Error 6 (Line 33): Output for attribute uses incorrect reference (`for="adult kid"` instead of `for="adult child"`), and calculation performs string concatenation (`+`) instead of numeric addition.
+        - Error 7 (Line 38): HTML entity `&Copy;` uses incorrect capitalization (should be `&copy;`).
+        - Error 8 (Line 41-43): Duplicate, malformed closing tags (`</html>5 </html>`) at the end of the file.
+    -->
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id="nav">
+        <a href="#content">Home</a> | 
+        <a href="#sidebar">Now Showing</a> | 
+        <a href="#order-form">Book Ticket</a>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+        
+        <div id="order-form">
+            <form action="booking.php" oninput="total.value = parseInt(adult.value || 0) + parseInt(child.value || 0); price.value = (parseInt(adult.value || 0) * 12) + (parseInt(child.value || 0) * 8);">
+                
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+                
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <!-- Extended: Phone number and show time inputs -->
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+                <label for="show-time">Show Time:</label><br>
+                <input type="time" id="show-time" name="show_time" required><br>
+                
+                <label for="date">Show date:</label><br>
+                <input type="date" id="date" name="date"><br>
+                
+                <label for="movie">Movie:</label><br>
+                <input id="movie" name="movie" list="movielist"><br>
+                <datalist id="movielist">
+                    <option value="Space Rangers">
+                    <option value="Kampung Comedy">
+                </datalist>
+                
+                <label for="adult">Adult tickets:</label><br>
+                <input type="number" id="adult" name="adult" value="0" min="0"><br>
+                
+                <label for="child">Child tickets:</label><br>
+                <input type="number" id="child" name="child" value="0" min="0"><br>
+                
+                <label for="rating">Rate our service:</label><br>
+                <input type="range" id="rating" name="rating" min="1" max="5"><br>
+                
+                <!-- Ticket Count Output -->
+                Total tickets: <output name="total" for="adult child">0</output><br>
+
+                <!-- Extended: Price Calculation Output (Adult = RM 12, Child = RM 8) -->
+                Total Price (RM): <output name="price" for="adult child">0</output><br>
+                
+                <input type="submit" value="Book Now">
+            </form>
+        </div>
+    </div>
+
+    <!-- Extended: Sidebar Section ("Now Showing" with at least 3 movies, strong, span, and trailer links) -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li><strong>Space Rangers</strong> &mdash; <span style="color:red;">PG-13</span> | <a href="https://youtube.com" target="_blank">Watch Trailer</a></li>
+            <li><strong>Kampung Comedy</strong> &mdash; <span style="color:green;">U</span> | <a href="https://youtube.com" target="_blank">Watch Trailer</a></li>
+            <li><strong>Cyber Odyssey</strong> &mdash; <span style="color:orange;">18</span> | <a href="https://youtube.com" target="_blank">Watch Trailer</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <!-- Extended Footer with exact requested text and entities: ® , < and & -->
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday &amp; &copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
