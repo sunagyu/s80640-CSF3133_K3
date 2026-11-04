@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeachyBake Online Order</title>
+</head>
+<body>
 
+    <!-- 1. Header Section -->
+    <div id="header">
+        <h1>PeachyBake&reg; <span>| Fresh Treats Right on Campus</span></h1>
+    </div>
+
+    <!-- 2. Navigation Section -->
+    <div id="nav">
+        <a href="#content">Home</a> | 
+        <a href="#sidebar">Price List</a> | 
+        <a href="#order-form">Order Now</a>
+    </div>
+
+    <!-- 3. Content Section -->
+    <div id="content">
+        <!-- Introduction Paragraph with at least 3 different inline elements -->
+        <p>
+            Welcome to <strong>PeachyBake</strong>, your favorite campus spot! 
+            <em>Satisfy your cravings</em> with our freshly baked goods. 
+            <span>Check out our offers &gt; 10 pieces get a free drink</span> 
+            or visit our <a href="#order-form">online order form</a> below!
+        </p>
+
+        <!-- Use at least three different block elements in the page (div, p, h2, ul, form, etc.) -->
+        <h2>Online Pre-Order Form</h2>
+        
+        <!-- Order Form (HTML5 Form Elements) -->
+        <div id="order-form">
+            <form action="#" method="post" oninput="totalPrice.value = (parseFloat(cupcakes.value || 0) * 3.00) + (parseFloat(slices.value || 0) * 5.00)">
+                
+                <p>
+                    <label for="cust-name">Customer Name:</label><br>
+                    <input type="text" id="cust-name" name="cust_name" placeholder="Enter your full name" required autofocus>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required placeholder="012-3456789">
+                </p>
+
+                <p>
+                    <label for="email">E-mail Address:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </p>
+
+                <p>
+                    <label for="pdate">Pick-up Date:</label><br>
+                    <input type="date" id="pdate" name="pickup_date">
+                </p>
+
+                <p>
+                    <label for="ptime">Pick-up Time:</label><br>
+                    <input type="time" id="ptime" name="pickup_time">
+                </p>
+
+                <p>
+                    <label for="flavour">Flavour:</label><br>
+                    <input type="text" id="flavour" name="flavour" list="flavour-list" placeholder="Select or type flavour">
+                    <datalist id="flavour-list">
+                        <option value="Chocolate Fudge">
+                        <option value="Vanilla Bean">
+                        <option value="Red Velvet">
+                        <option value="Matcha Green Tea">
+                    </datalist>
+                </p>
+
+                <p>
+                    <label for="icing-color">Icing Colour:</label><br>
+                    <input type="color" id="icing-color" name="icing_color" value="#ff0000">
+                </p>
+
+                <p>
+                    <label for="sweetness">Sweetness Level (1 - 5):</label><br>
+                    <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3">
+                </p>
+
+                <!-- 6. Price Calculator (<output>) -->
+                <h3>Instant Price Calculator</h3>
+                <p>
+                    <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                    <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+                </p>
+                <p>
+                    <label for="slices">Cake Slices (RM 5.00 each):</label>
+                    <input type="number" id="slices" name="slices" min="0" value="0">
+                </p>
+                <p>
+                    <strong>Total Price (RM): </strong>
+                    <output name="totalPrice" for="cupcakes slices">0.00</output>
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit Order">
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. Sidebar Section -->
+    <div id="sidebar">
+        <h3>Price List</h3>
+        <ul>
+            <li>Cupcakes &mdash; RM 3.00 each</li>
+            <li>Cake Slices &mdash; RM 5.00 each</li>
+            <li>Special Drinks &mdash; RM 4.50</li>
+            <li>Combo Set &pound;5.00 (Promo)</li>
+        </ul>
+    </div>
+
+    <!-- 5. Footer Section -->
+    <div id="footer">
+        <p>&copy; 2026 PeachyBake. All rights reserved.&nbsp;&nbsp;<span>Contact: support@peachybake.edu</span></p>
+    </div>
+
+    <!-- 7. Testing Observations Comment -->
+    <!-- 
+        TESTING OBSERVATIONS:
+        1. Click Submit with all fields empty: 
+           The browser displays a validation popup prompting the user to fill out the required 
+           "Customer Name" text field because of the 'required' and 'autofocus' attributes.
+        2. Enter "myemail" in the e-mail field and submit again: 
+           The browser catches the invalid format and prompts an error stating that the 
+           input must include an '@' symbol (e.g., "Please include an '@' in the email address...").
+    -->
+
+</body>
+</html>
