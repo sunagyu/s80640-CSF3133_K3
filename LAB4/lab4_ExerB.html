@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    <!-- Linked External Stylesheet (Part 2, Item 5) -->
+    <link rel="stylesheet" href="cafe.css">
+    <style type="text/css">
+        h1 {
+            text-decoration: overline;
+        }
+        p {
+            color: #333333;
+            text-align: justify;
+        }
+        #intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            margin-right: 5px;
+        }
+        /* Interactive Link States (LVHA Order) */
+        a:link { color: #1A5276; }
+        a:visited { color: #7D3C98; }
+        a:hover { color: #E67E22; }
+        a:active { color: #C0392B; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      Error Identification List (Part 1, Item 2):
+      1. Line 7: CSS comment syntax inside <style> tag was written as HTML comment. Changed to /* ... */.
+      2. Line 9: Invalid CSS property value 'list-style-type: no;'. Fixed to 'list-style-type: none;'.
+      3. Lines 13-16: Link states were out of LVHA order. Reordered to :link, :visited, :hover, :active.
+      4. Line 17: Invalid CSS text-decoration value 'overlined'. Fixed to 'overline'.
+      5. Line 18: Missing colon after property name 'color #333333'. Fixed to 'color: #333333;'.
+      6. Line 22: Missing dot selector prefix for class 'highlight'. Fixed to '.highlight'.
+      7. Line 34: Incorrect anchor target href="menu". Fixed to href="#menu".
+      8. Lines 37-38: <h2> and <p> elements placed inside <ul> menu container. Moved them into <section id="menu">.
+      9. Line 43 & 46: Duplicate ID 'item' used on multiple articles. Changed to class="item".
+      10. Line 53: <video> tag missing the 'controls' attribute. Added 'controls'.
+      11. Line 54: Invalid video MIME type 'type="mp4"'. Fixed to 'type="video/mp4"'.
+    -->
+
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Today's Menu</h2>
+            <p id="intro">Freshly brewed coffee and local delights every day.</p>
+
+            <article class="item">
+                <h3>Kopi Tarik</h3>
+                <p>Only <span class="old-price">RM 4.50</span><span class="highlight">RM 3.50</span></p>
+            </article>
+
+            <article class="item">
+                <h3>Nasi Lemak</h3>
+                <p>Only <span class="old-price">RM 6.50</span><span class="highlight">RM 5.00</span></p>
+            </article>
+        </section>
+
+        <!-- Video Section (Part 2, Item 7) -->
+        <section id="video">
+            <h2>Watch Our Story</h2>
+            <figure>
+                <video width="400" height="300" controls>
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Experience our daily fresh coffee brewing process.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Feedback Form Section (Part 2, Item 8) -->
+        <section id="feedback">
+            <h2>Customer Feedback</h2>
+            <form action="#" method="post" class="feedback-form">
+                <div class="form-group">
+                    <label for="fb-name">Name:</label>
+                    <input type="text" id="fb-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-email">E-mail:</label>
+                    <input type="email" id="fb-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Visit Type:</label>
+                    <label><input type="radio" name="visit_type" value="dine_in" checked> Dine-in</label>
+                    <label><input type="radio" name="visit_type" value="take_away"> Take-away</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Favourite Items:</label>
+                    <label><input type="checkbox" name="fav_items" value="kopi_tarik"> Kopi Tarik</label>
+                    <label><input type="checkbox" name="fav_items" value="nasi_lemak"> Nasi Lemak</label>
+                    <label><input type="checkbox" name="fav_items" value="roti_bakar"> Roti Bakar</label>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section (Part 2, Item 9) -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Email: <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
