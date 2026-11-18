@@ -1,0 +1,135 @@
+/* General Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FBF7F0;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Layout container for width restriction */
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: 2rem auto;
+}
+
+/* Header with Background Image */
+header {
+    background-image: url("header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Horizontal Navigation Bar */
+nav {
+    background-color: #2C2C2C;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #111111;
+}
+
+nav li a.active {
+    background-color: #E67E22;
+    color: white;
+}
+
+/* Paragraph Formatting */
+section p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/* Table Styling */
+#stalls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#stalls-table th, 
+#stalls-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+}
+
+#stalls-table th {
+    background-color: #E67E22;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#stalls-table th.price-col,
+#stalls-table td.price-col {
+    text-align: right;
+}
+
+#stalls-table tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+#stalls-table tr:hover {
+    background-color: #FDEBD0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #EFE6D8;
+    color: #333333;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #ddd;
+}
