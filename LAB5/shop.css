@@ -1,0 +1,108 @@
+/* General body formatting and base typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styling with background image and cover sizing */
+header {
+    background-image: url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 1rem;
+}
+
+/* Headings font styling */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Paragraph spacing and line-height */
+p {
+    line-height: 1.6;
+}
+
+/* Navigation bar dark background container */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+/* Navigation links formatting and display */
+nav li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Navigation link hover effect */
+nav li a:hover {
+    background-color: #111;
+}
+
+/* Active navigation link style */
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Table layout and borders */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+/* Table cell padding and borders */
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+}
+
+/* Table header styling */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Right-align price column */
+#products th.price-col,
+#products td.price-col {
+    text-align: right;
+}
+
+/* Alternating row colors */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table row hover effect */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+}
